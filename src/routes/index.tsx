@@ -10,7 +10,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const MODULES = [
 // TABULA — the master board of everything Planviry does
 const TABULA = [
   { code: "T.01", name: "Coordination",   body: "End-to-end oversight for any event, at any complexity, on any continent." },
