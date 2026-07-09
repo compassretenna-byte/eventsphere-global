@@ -155,7 +155,7 @@ function HeroImage() {
 }
 
 
-function SectionMark({ code, label, kicker }: { code: string; label: string; kicker: string }) {
+function SectionMark({ code, kicker }: { code: string; kicker: string }) {
   return (
     <div className="flex items-end justify-between gap-6 mb-12 border-b border-current/15 pb-6">
       <div className="flex items-baseline gap-6">
