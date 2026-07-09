@@ -53,11 +53,7 @@ const STRATA = [
   { layer: "S.III", tier: "Sovereign",  hint: "Enterprise · global operations", detail: "Dedicated planning bureau, $10M+ coverage, cross-continent staging." },
 ];
 
-const ARCHETYPES = [
-  { image: caseTuscany, place: "Tuscany", title: "The Marchesi Nuptials", meta: "Private · 180 Guests · 6 Modules Active" },
-  { image: caseBali, place: "Bali", title: "The Ubud Strategy Retreat", meta: "Corporate · 45 Guests · 7 Modules Active" },
-  { image: caseLondon, place: "London", title: "Sovereign Fintech Summit", meta: "Enterprise · 1,200 Guests · 4 Modules Active" },
-];
+const ATLAS_IMAGES = [caseTuscany, caseBali, caseLondon];
 
 function Home() {
   return (
