@@ -11,13 +11,47 @@ export const Route = createFileRoute("/")({
 });
 
 const MODULES = [
-  { n: "01", name: "Event Coordination", body: "Full-spectrum planning oversight for any event, at any complexity, on any continent.", cta: "Orchestrate" },
-  { n: "02", name: "Venue & Accommodation", body: "Private estates, hotels, resorts, villas, event spaces and conference centers, curated worldwide.", cta: "Browse" },
-  { n: "03", name: "Destination Travel", body: "Integrated flight logistics, private transfers and group arrivals. One movement, no seams.", cta: "Explore" },
-  { n: "04", name: "Ticketing & Access", body: "Concert and sport inventory, VIP hospitality, theatre boxes and bespoke experiences.", cta: "Secure" },
-  { n: "05", name: "Vendor Ecosystem", body: "World-class caterers, photographers, entertainers, decor houses and production designers.", cta: "Connect" },
-  { n: "06", name: "Membership & Loyalty", body: "Subscription-tier access, Club status and the world's most guarded gates opened on request.", cta: "Join" },
-  { n: "07", name: "Bespoke Insurance", body: "Comprehensive event liability, travel protection and visitor coverage up to enterprise scale.", cta: "Protect" },
+// TABULA — the master board of everything Planviry does
+const TABULA = [
+  { code: "T.01", name: "Coordination",   body: "End-to-end oversight for any event, at any complexity, on any continent." },
+  { code: "T.02", name: "Venue",          body: "Private estates, hotels, resorts, villas, conference floors — curated." },
+  { code: "T.03", name: "Travel",         body: "Flights, private jets, group transfers, arrivals resolved as one movement." },
+  { code: "T.04", name: "Ticketing",      body: "Concert, sport, theatre and VIP hospitality inventory on request." },
+  { code: "T.05", name: "Vendors",        body: "Caterers, photographers, entertainers, decor and production houses." },
+  { code: "T.06", name: "Membership",     body: "Subscription tiers, Club status, guarded gates opened for members." },
+  { code: "T.07", name: "Insurance",      body: "Event liability, travel and visitor coverage up to enterprise scale." },
+];
+
+// CORPUS — the highlighted vendor body
+const CORPUS = [
+  { house: "Aman",             discipline: "Accommodation", origin: "Zürich",   since: "1988" },
+  { house: "Alain Ducasse",    discipline: "Gastronomy",    origin: "Monaco",   since: "1987" },
+  { house: "NetJets",          discipline: "Aviation",      origin: "Columbus", since: "1964" },
+  { house: "Bureau Betak",     discipline: "Production",    origin: "Paris",    since: "1990" },
+  { house: "Preston Bailey",   discipline: "Decor",         origin: "New York", since: "1980" },
+  { house: "Annie Leibovitz",  discipline: "Photography",   origin: "New York", since: "1970" },
+  { house: "Cirque du Soleil", discipline: "Entertainment", origin: "Montréal", since: "1984" },
+  { house: "Rosewood",         discipline: "Estates",       origin: "Dallas",   since: "1979" },
+];
+
+// ATLAS — the global operating theatre
+const ATLAS = [
+  { city: "Val d'Orcia",   iso: "IT", coord: "43.07° N · 11.61° E", note: "Estates · Wineries" },
+  { city: "Ubud",          iso: "ID", coord: "08.50° S · 115.26° E", note: "Retreats · Villas" },
+  { city: "Reykjavík",     iso: "IS", coord: "64.14° N · 21.94° W", note: "Cinematic sets" },
+  { city: "Marrakech",     iso: "MA", coord: "31.63° N · 07.99° W", note: "Riads · Palaces" },
+  { city: "Kyoto",         iso: "JP", coord: "35.01° N · 135.76° E", note: "Ryokan · Temples" },
+  { city: "Aspen",         iso: "US", coord: "39.19° N · 106.81° W", note: "Alpine · Chalets" },
+  { city: "Cape Town",     iso: "ZA", coord: "33.92° S · 18.42° E", note: "Vineyards · Cliffs" },
+  { city: "Marina Bay",    iso: "SG", coord: "01.28° N · 103.85° E", note: "Summits · Towers" },
+  { city: "Costa Smeralda", iso: "IT", coord: "41.10° N · 09.53° E", note: "Sea · Yachts" },
+];
+
+// STRATA — tiered layers of engagement
+const STRATA = [
+  { layer: "S.I",   tier: "Signature",  hint: "Single event · fully composed", detail: "One master orchestrator. Full module access. Bespoke sourcing per event." },
+  { layer: "S.II",  tier: "Cercle",     hint: "Annual · unlimited events",      detail: "Priority inventory, zero-fee logistics, guarded gates opened first." },
+  { layer: "S.III", tier: "Sovereign",  hint: "Enterprise · global operations", detail: "Dedicated planning bureau, $10M+ coverage, cross-continent staging." },
 ];
 
 const ARCHETYPES = [
@@ -33,10 +67,12 @@ function Home() {
       <main className="pt-32">
         <Hero />
         <HeroImage />
-        <Modules />
-        <Composition />
-        <Archetypes />
-        <Closing />
+        <Tabula />
+        <Forma />
+        <Corpus />
+        <Atlas />
+        <Strata />
+        <Regimen />
       </main>
       <Footer />
     </div>
@@ -49,9 +85,10 @@ function Nav() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <span className="font-serif text-2xl tracking-tight italic">Planviry</span>
         <div className="hidden md:flex gap-8 text-xs font-medium tracking-widest uppercase">
-          <a href="#modules" className="hover:text-accent transition-colors">The Modules</a>
-          <a href="#archetypes" className="hover:text-accent transition-colors">Portfolio</a>
-          <a href="#membership" className="hover:text-accent transition-colors">Membership</a>
+          <a href="#tabula" className="hover:text-accent transition-colors">Tabula</a>
+          <a href="#corpus" className="hover:text-accent transition-colors">Corpus</a>
+          <a href="#atlas" className="hover:text-accent transition-colors">Atlas</a>
+          <a href="#strata" className="hover:text-accent transition-colors">Strata</a>
         </div>
         <button className="text-xs font-medium bg-ink text-canvas py-2 pr-3 pl-2 ring-1 ring-ink flex items-center gap-2">
           <span className="size-4 bg-canvas/20 rounded-full shrink-0" />
